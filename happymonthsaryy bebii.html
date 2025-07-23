@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Monthsary</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #ffe6f0;
+      color: #333;
+      text-align: center;
+      font-family: 'Comic Neue', cursive;
+      font-size: 2.4rem;
+      line-height: 1.9;
+    }
+    nav {
+      background: #ffb3d9;
+      padding: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav a {
+      margin: 0 1.5rem;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+    .section-shape {
+      background: #fff0f5;
+      margin: 2rem auto;
+      border-radius: 30px;
+      padding: 2rem;
+      max-width: 800px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      position: relative;
+    }
+    .decor-sticker {
+      position: absolute;
+      width: 60px;
+      top: -30px;
+    }
+    .left-sticker { left: -30px; }
+    .right-sticker { right: -30px; }
+    .quote {
+      font-style: italic;
+      margin-top: 1.5rem;
+      font-size: 1.3rem;
+      color: #cc3399;
+    }
+    .gallery img {
+      width: 150px;
+      margin: 10px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+    .falling-hearts span {
+      position: fixed;
+      animation: fall 10s linear infinite;
+      font-size: 2rem;
+      color: #ff3399;
+    }
+    @keyframes fall {
+      0% { transform: translateY(-100px); opacity: 1; }
+      100% { transform: translateY(100vh); opacity: 0; }
+    }
+    #lockscreen {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: #ffcce6;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      flex-direction: column;
+      transition: opacity 1s ease, visibility 1s ease;
+    }
+    #lockscreen.fade-out {
+      opacity: 0;
+      visibility: hidden;
+    }
+    #lockscreen img {
+      width: 250px;
+      margin-bottom: 1em;
+    }
+    #passwordInput {
+      font-size: 2rem;
+      padding: 0.5em;
+      border-radius: 10px;
+      border: none;
+      text-align: center;
+      margin-bottom: 1em;
+      width: 200px;
+    }
+    #unlockBtn {
+      background: #ff3399;
+      border: none;
+      color: white;
+      padding: 0.6em 1.5em;
+      font-size: 1.5rem;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    #letter {
+      background-image: url('https://i.imgur.com/HtNpSst.png');
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      text-shadow: 1px 1px 2px #000;
+    }
+  </style>
+</head>
+<body>
+  <div id="lockscreen">
+    <img src="https://i.imgur.com/Q124mTY.png" alt="Heart Lock">
+    <input type="password" id="passwordInput" placeholder="Enter Password">
+    <button id="unlockBtn">Unlock</button>
+  </div>
+
+  <!-- Falling hearts -->
+  <div class="falling-hearts">
+    <span>💖</span><span>💘</span><span>💕</span><span>❤️</span><span>💓</span>
+    <span>💞</span><span>💗</span><span>💝</span><span>❣️</span><span>💖</span>
+  </div>
+
+  <!-- Main Navigation -->
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#happy">Happy</a>
+    <a href="#letter">Letter</a>
+    <a href="#surprise">Surprise</a>
+  </nav>
+
+  <section id="home" class="section-shape">
+    <img src="https://i.imgur.com/Yx8jsxD.png" class="decor-sticker left-sticker">
+    <h1>HAIUEUE BEBII
+      ! 💕</h1>
+    <p>Welcome to something made just for you. You're my happiness, and this is my little surprise for you. ✨</p>
+    <p class="quote">“Love is composed of a single soul inhabiting two bodies.” – Aristotle</p>
+    <img src="https://i.imgur.com/1BfLdFd.png" class="decor-sticker right-sticker">
+  </section>
+
+  <section id="gallery" class="section-shape">
+    <h2>📸 Our Memories</h2>
+    <div class="gallery">
+      <img src="https://i.imgur.com/q3c4bdT.png">
+      <img src="https://i.imgur.com/IZxxOK1.png">
+      <img src="https://i.imgur.com/uJmQcQV.png">
+    </div>
+  </section>
+
+  <section id="happy" class="section-shape">
+    <h2>😊 You Said Yes!</h2>
+    <p>Thank you for loving me back. You make my world complete. I promise to continue making you feel special every single day! 💖</p>
+  </section>
+
+  <section id="letter" class="section-shape">
+    <h2>💌 A Love Letter</h2>
+    <p>Every day I wake up beside you, I realize how far we’ve come po — not just in time, but in heart, patience, understanding, and love. Who would’ve thought that the very person I used to just chat or laugh with would become the one I’d build a home with — not just the literal kind, but the kind you feel deep in your soul. A place where I can rest, cry, laugh like a kid, dream like a fool, and love without limits — that place is you, my girlfieie.</p>
+    <p>We’ve had our ups po, the ones that made us feel like we’re the luckiest people in the world — like those days when we’d hold hands in public and smile at each other for no reason na para tayong mukhang tanga TT, those nights we’d cuddle through videochat feeling like nothing else mattered, the random jokes that made our stomachs hurt, or the quiet moments when we’d just exist next to each other, no words, just warmth and pure love para sa atin po
+</p>
+    <p>But we’ve also had our downs — the misunderstandings, the frustrations, the silent moments that weren’t so peaceful, the days we questioned if we were still on the same team. But guess what po? We still chose each other. Again. And again. Through the noise, through the pain, through the tears we didn’t always show — we stayed.
+</p>
+    <p>And that’s what makes this love so real to me. Not just because we’re happy po bb — but because even when we weren’t, we still held on jdkwja kagaya ng argument at tampuhan natin ngayon at kahapon po. We learned to understand before reacting. We learned to listen beyond the words. We learned to love through the cracks. And those lessons? They turned two imperfect people into a powerful kind of love.
+</p>
+    <p>love, I know I’m not always the easiest person to be with. Sometimes I say the wrong things. Sometimes I shut down. Sometimes I let my emotions speak first before my heart does. But despite all that — you stayed. You saw the raw, unfiltered, messy parts of dustine hdjwka… and you still called me yours. And I’ll never be able to thank you enough for that.</p>
+    <p>There’s something sacred about waking up every day and knowing I get to live life with you. Not just sleep beside you, but grow with you, laugh with you, argue then make up with you, cry with you, chase dreams with you, and build the kind of future that we’ve both imagined — the kind where love isn’t just said, it’s shown. Every day. In the smallest things. You are my comfort when the world feels too loud. You are my peace when my mind feels too heavy. You are my safe space when I’m tired of pretending. You are my home, in every sense of the word.
+
+    <p>And I want you to know, mahal, that every moment we’ve lived — the messy ones, the magical ones, the mundane ones — they all matter. Because they led us here. To today. To this very love that’s still standing strong, even after everything life has thrown at us.
+</p>
+    <p>Happy 4th monthsary, and happy 9 months of waking up next to you emotionally and morally, arguing about silly things, cooking together, being tamad together, crying, laughing, loving. Thank you for loving me. For choosing me. For staying, even when it was hard. I promise to keep loving you baby — not just when things are easy, but especially when they’re not. I’ll fight for us every single day. Because you’re worth it. Because we’re worth it.
+</p>
+    <p>Here’s to more months of holding each other through chaos and comfort. Here’s to more “good morning, bebi” and “ingat, ha.” Here’s to more “tulog ka na, love you” and “huwag mo akong iiwan.” Here’s to us — two souls who didn’t give up. I LOVEE YOUU SO MUCHIEIE BABYYY — endlessly, completely, deeply. You’re my now, my always, my everything. HAPPY MOTMOT MY BABYYYCAKES KJDWKJA, I LOVEEE YOUUU SO MUCHIEIE. 🌙💗
+</p>
+  </section>
+
+  <section id="surprise" class="section-shape">
+    <h2>🎉 Monthsary Surprise!</h2>
+    <p>Click the button below for a magical surprise ✨</p>
+    <button onclick="window.location.href='galaxy.html'" style="font-size:1.5rem;padding:10px 20px;border:none;background:#ff66b2;color:#fff;border-radius:15px;">Reveal Surprise</button>
+  </section>
+
+  <script>
+    document.getElementById('unlockBtn').addEventListener('click', function() {
+      var password = document.getElementById('passwordInput').value;
+      if (password === '122106') {
+        var lockscreen = document.getElementById('lockscreen');
+        lockscreen.classList.add('fade-out');
+        setTimeout(() => {
+          lockscreen.style.display = 'none';
+        }, 1000);
+      } else {
+        alert('Wrong password! Try again.');
+      }
+    });
+  </script>
+</body>
+</html>
